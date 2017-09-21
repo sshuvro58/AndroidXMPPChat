@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/bubble_layout_parent"
+              android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/bubble_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/bubble1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/message_sender"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="14sp"/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/message_timestamp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="right"-->
+    <!--android:textSize="12sp"-->
+    <!--android:text="SDSDSD"/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/message_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:maxEms="12"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:textSize="14sp"-->
+    <!--android:padding="5dp"-->
+    <!--android:text="Hi! new message"-->
+    <!--android:textColor="@android:color/primary_text_light" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/attachmentHoder"-->
+    <!--android:visibility="gone">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:id="@+id/chatImage"-->
+    <!--android:src="@drawable/ic_user_profile_menu_item" />-->
+
+    <!--<VideoView-->
+    <!--android:id="@+id/chatVideo"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="200dp" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:id="@+id/videoThumb" />-->
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/audioHolder"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/audioIcon"-->
+    <!--android:src="@android:drawable/ic_media_ff" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/audioBoxFileName"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_toEndOf="@+id/audioIcon"-->
+    <!--android:text="" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<ProgressBar-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/attachmentProgress"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_centerHorizontal="true" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bubble_layout"
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/message_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="2dp"
+            android:paddingStart="10dp"
+            android:gravity="top"
+            android:text="sender"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/message_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:gravity="top"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="2dp"
+            android:paddingStart="0dp"
+            android:textStyle="italic"
+            android:layout_alignBaseline="@+id/message_sender"
+            android:text="SDSDSD"
+            android:layout_toRightOf="@+id/message_sender" />
+
+        <TextView
+            android:id="@+id/message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="12"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:layout_below="@+id/message_timestamp"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:text="Hi! new message"
+            android:textColor="@android:color/primary_text_light" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
