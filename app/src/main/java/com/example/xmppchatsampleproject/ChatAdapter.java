@@ -17,10 +17,6 @@ import android.widget.VideoView;
 
 import java.util.ArrayList;
 
-/**
- * Created by Asif on 12/26/2016.
- */
-
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder> {
     Context mContext;
     ArrayList<ChatMessage> mChatList;
