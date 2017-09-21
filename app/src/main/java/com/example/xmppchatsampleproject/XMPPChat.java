@@ -162,9 +162,9 @@ public class XMPPChat {
             public void connectionClosedOnError(Exception e) {
                 Log.d("xmpp-connection", "connection-closed-on-error");//login();
                 //login(sessionManager.getUsername(), sessionManager.getUserPass());
-                Intent intent = new Intent("xmpp_authenticated");
-                intent.putExtra("xmpp_status", "fail");
-                LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
+                //Intent intent = new Intent("xmpp_authenticated");
+                //intent.putExtra("xmpp_status", "fail");
+                //LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
                 logoutRelogin();
             }
 
@@ -362,6 +362,7 @@ public class XMPPChat {
                             NotificationCompat.Builder builder =
                                     new NotificationCompat.Builder(context)
                                             .setSound(uri)
+                                            .setSmallIcon(R.mipmap.ic_launcher)
                                             .setAutoCancel(true);
                             NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
                             //chat in notification
@@ -431,6 +432,7 @@ public class XMPPChat {
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(context)
                         .setSound(uri)
+                        .setSmallIcon(R.mipmap.ic_launcher)
                         .setAutoCancel(true);
         NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         //chat in notification

@@ -90,11 +90,12 @@ public class MainActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             // Get extra data included in the Intent
             progressBar.setVisibility(View.GONE);
+            startActivity(new Intent(MainActivity.this,ChatOptionActivity.class));
             Bundle extras = getIntent().getExtras();
             if (extras != null) {
                 String messageContent = extras.getString("xmpp_status");
                 if(messageContent!=null && messageContent.equals("success")){
-                    startActivity(new Intent(MainActivity.this,ChatOptionActivity.class));
+                    //startActivity(new Intent(MainActivity.this,ChatOptionActivity.class));
                 }else {
                     Toast.makeText(MainActivity.this,"Somthing went wrong. try again",Toast.LENGTH_SHORT).show();
                 }

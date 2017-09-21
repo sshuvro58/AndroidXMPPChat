@@ -49,7 +49,8 @@ public class ChatOptionActivity extends AppCompatActivity {
         group.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(ChatOptionActivity.this, GroupChatActivity.class);
+                startActivity(intent);
             }
         });
     }
