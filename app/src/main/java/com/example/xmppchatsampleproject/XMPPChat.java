@@ -50,9 +50,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Asif on 12/27/2016.
- */
+
 
 public class XMPPChat {
 
