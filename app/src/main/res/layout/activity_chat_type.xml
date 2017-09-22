@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.xmppchatsampleproject.ChatOptionActivity">
+    tools:context="com.example.xmppchatsampleproject.ChatTypeActivity">
 
     <Button
+        android:id="@+id/oneTwoOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="One To One Chat"
-        android:id="@+id/oneTwoOne"/>
+        android:text="One To One Chat" />
 
     <Button
+        android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Group Chat"
         android:layout_below="@+id/oneTwoOne"
+        android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
-        android:id="@+id/group"/>
+        android:text="Group Chat" />
 
 </RelativeLayout>

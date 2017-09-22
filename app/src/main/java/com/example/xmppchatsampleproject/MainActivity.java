@@ -22,6 +22,25 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout rootContainer;
     ProgressBar progressBar;
     SharedPreferenceManager sharedPreferenceManager;
+    private BroadcastReceiver xmmppLoginResponse = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // Get extra data included in the Intent
+            progressBar.setVisibility(View.GONE);
+            startActivity(new Intent(MainActivity.this, ChatTypeActivity.class));
+            Bundle extras = getIntent().getExtras();
+            if (extras != null) {
+                String messageContent = extras.getString("xmpp_status");
+                if (messageContent != null && messageContent.equals("success")) {
+                    //startActivity(new Intent(MainActivity.this,ChatTypeActivity.class));
+                } else {
+                    Toast.makeText(MainActivity.this, "Somthing went wrong. try again", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,23 +103,4 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         LocalBroadcastManager.getInstance(this).unregisterReceiver(xmmppLoginResponse);
     }
-
-    private BroadcastReceiver xmmppLoginResponse = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            // Get extra data included in the Intent
-            progressBar.setVisibility(View.GONE);
-            startActivity(new Intent(MainActivity.this,ChatOptionActivity.class));
-            Bundle extras = getIntent().getExtras();
-            if (extras != null) {
-                String messageContent = extras.getString("xmpp_status");
-                if(messageContent!=null && messageContent.equals("success")){
-                    //startActivity(new Intent(MainActivity.this,ChatOptionActivity.class));
-                }else {
-                    Toast.makeText(MainActivity.this,"Somthing went wrong. try again",Toast.LENGTH_SHORT).show();
-                }
-            }
-
-        }
-    };
 }

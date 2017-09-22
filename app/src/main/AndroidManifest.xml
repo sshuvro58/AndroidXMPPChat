@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChatOptionActivity"></activity>
+        <activity android:name=".ChatTypeActivity"></activity>
         <activity android:name=".OneToOneChatActivity"></activity>
         <activity android:name=".GroupChatActivity"></activity>
     </application>

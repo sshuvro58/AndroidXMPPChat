@@ -8,12 +8,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import java.util.ArrayList;
 
@@ -57,10 +54,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
 
         holder.mBubbleTextView.setText(message.getMessageBody());
 
-
-
-
-
     }
 
 
@@ -80,13 +73,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
         TextView mSenderTextView;
         TextView mBubbleTextView;
         TextView mTimeStampTextView;
-        TextView audioBoxFileName;
-        ImageView chatImage;
-        ImageView videoThumb;
-        VideoView chatVideo;
-        RelativeLayout attachmentHoder;
-        ProgressBar attachmentProgress;
-        RelativeLayout audioHolder;
 
         public ChatViewHolder(View view) {
             super(view);
